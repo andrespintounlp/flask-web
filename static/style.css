@@ -1,0 +1,98 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #193a6f;
+}
+
+nav {
+  background-color: #193a6f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+nav > ul > li {
+  list-style: none;
+}
+
+nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+footer > div {
+  padding: 0.5em;
+}
+
+.article-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10em;
+}
+
+.article-section > article {
+  margin: 1em;
+  flex-grow: 2;
+}
+
+article > p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-container {
+  padding: 1em;
+}
+
+.text-container > p {
+  font-size: 4em;
+  font-weight: bolder;
+  color: white;
+  /*background-color: orange;*/
+  text-align: right;
+}
+
+/* Landing presentation */
+
+#landing-image {
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  float: right;
+}
+
+#coding-button {
+  float: right;
+  font-size: 1.5em;
+  background-color: orange;
+  color: white;
+  border-radius: 0.5em;
+  border: none;
+  font-family: inherit;
+}
+
+.landing-presentation {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding-top: 5em;
+}
+
+.image-container,
+.text-container {
+  flex-grow: 3;
+}
