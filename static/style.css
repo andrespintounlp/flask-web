@@ -3,26 +3,36 @@ html {
 }
 
 body {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
   margin: 0;
   background-color: #193a6f;
 }
 
 nav {
-  background-color: #193a6f;
-  display: flex;
-  flex-wrap: wrap;
+  display: inline-flex;
   justify-content: flex-end;
+}
+
+.nav-items {
+  background-color: #193a6f;
+  flex-wrap: wrap;
+  padding: 1em;
+  display: inline-flex;
+}
+
+.nav-items > li:first-child {
+  align-self: flex-end;
+}
+
+.nav-items > li {
+  list-style: none;
   padding: 1em;
 }
 
-nav > ul > li {
-  list-style: none;
-}
-
-nav > ul > li > a {
+.nav-items > li > a {
   color: white;
   text-decoration: none;
 }
@@ -32,16 +42,19 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin-top: auto;
+  font-size: 0.5em;
+  text-align: center;
 }
 
 footer > div {
   padding: 0.5em;
+  width: 100%;
 }
 
 .article-section {
   display: flex;
-  flex-wrap: wrap;
   padding-top: 10em;
+  color: white;
 }
 
 .article-section > article {
@@ -63,7 +76,6 @@ article > p {
   font-size: 4em;
   font-weight: bolder;
   color: white;
-  /*background-color: orange;*/
   text-align: right;
 }
 
@@ -84,6 +96,8 @@ article > p {
   border-radius: 0.5em;
   border: none;
   font-family: inherit;
+  text-decoration: none;
+  padding: 0.5em;
 }
 
 .landing-presentation {
@@ -95,4 +109,63 @@ article > p {
 .image-container,
 .text-container {
   flex-grow: 3;
+}
+
+/* Testing media queries */
+
+@media screen and (max-width: 480px) {
+  #coding-button {
+    background-color: red;
+    float: none;
+  }
+
+  .landing-presentation {
+    flex-wrap: wrap;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  .text-container > p {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .article-section {
+    flex-direction: column;
+    padding-top: 5em;
+  }
+
+  #landing-image {
+    width: 15em;
+    height: 15em;
+    border-radius: 10%;
+    float: none;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #coding-button {
+    background-color: blue;
+  }
+
+  .text-container > p {
+    font-size: 4em;
+    font-weight: bolder;
+    color: white;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #coding-button {
+    background-color: green;
+  }
 }

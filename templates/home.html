@@ -2,34 +2,34 @@
 
 {% block content %}
 <div class="landing-presentation">
-   <div class="image-container">
-     <div>
-      <img src="{{ url_for('static',filename='landing-image.png') }}" id="landing-image">
-     </div>
-   </div>
-   <div class="text-container">
-     <p>Learning by doing</p>
-     <button id="coding-button">START CODING</button>
-   </div>
+  <div class="image-container">
+    <div>
+    <img src="{{ url_for('static',filename='landing-image.png') }}" id="landing-image">
+    </div>
+  </div>
+  <div class="text-container">
+    <p>Learning by doing</p>
+    <a href="" id="coding-button">START CODING</a>
+  </div>
 </div>
 <div class="article-section">
     <article>
         <div>
-            <h2>A new discovery...</h2>
-            <p>adaskdapsdasdalsjdaksjdlkajslkdajsldkjsalkdjklasjdkasda</p>
+            <h2>A new course</h2>
+            {% include "sample.html" %}
         </div>
     </article>
     <article>
-      <h2>A new discovery...</h2>
-      <p>adaskdapsdasdalsjdaksjdlkajslkdajsldkjsalkdjklasjdkasda</p>
+      <div>
+      <h2>A new course</h2>
+      {% include "sample.html" %}
+      </div>
     </article>
     <article>
-      <h2>A new discovery...</h2>
-      <p>adaskdapsdasdalsjdaksjdlkajslkdajsldkjsalkdjklasjdkasda</p>
+      <div>
+      <h2>A new course</h2>
+      {% include "sample.html" %}
+      </div>
     </article>
-  </div>
-  <aside>
-    asldjlaksdjas
-  </aside>
 </div>
 {% endblock %}

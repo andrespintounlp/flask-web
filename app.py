@@ -17,7 +17,7 @@ def contact():
 
 @app.route('/vision')
 def vision():
-    return render_template('our-vision')
+    return render_template('vision.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
